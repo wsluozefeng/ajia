@@ -6,19 +6,22 @@
  *  
  */
 
+//Ajia常量
+define( 'AJIA_LIB_PATH', AJIA_PATH . "Lib/" );         //Ajia的核心类目录
+define( 'AJIA_COMMON_PATH', AJIA_PATH . "Common/" );   //Ajia的Common目录
+define( 'AJIA_EXTEND_PATH', AJIA_PATH . "Extend/" );   //Ajia的Extend目录
+
+//项目常量
+define( 'LIB_PATH',     APP_PATH . "Lib/" );
+define( 'CONF_PATH',    APP_PATH . "Conf/" );
+define( 'RUNTIME_PATH', BASE_PATH . "Runtime/" );
+define( 'LOG_PATH',     RUNTIME_PATH . "Log/" );
+define( 'CACHE_PATH',   RUNTIME_PATH . "cache/" );
+
+// 为了方便导入第三方类库 设置Vendor目录到include_path
+set_include_path(get_include_path() . PATH_SEPARATOR . AJIA_EXTEND_PATH . 'Vendor/');
+
 function load_file(){
-
-    //Ajia常量
-    define( 'AJIA_LIB_PATH', AJIA_PATH . "Lib/" );         //Ajia的核心类目录
-    define( 'AJIA_COMMON_PATH', AJIA_PATH . "Common/" );   //Ajia的Common目录
-    define( 'AJIA_EXTEND_PATH', AJIA_PATH . "Extend/" );   //Ajia的Extend目录
-
-    //项目常量
-    define( 'LIB_PATH',     APP_PATH . "Lib/" );
-    define( 'CONF_PATH',    APP_PATH . "Conf/" );
-    define( 'RUNTIME_PATH', BASE_PATH . "Runtime/" );
-    define( 'LOG_PATH',     RUNTIME_PATH . "Log/" );
-    define( 'CACHE_PATH',   RUNTIME_PATH . "cache/" );
 
     //加载基础函数库
     require_once AJIA_COMMON_PATH . 'common.php';

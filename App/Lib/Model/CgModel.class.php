@@ -99,5 +99,33 @@ class CgModel extends Model
         return $discountFactor;
     }
 
+}
 
+class Person{
+    private $_name;
+    private $_department;
+
+    public function __construct( $name ){
+        $this->_name = $name;
+    }
+
+    public function setDepartment( Department $department ){
+        $this->_department = $department;
+    }
+
+    public function getDepartment(){
+        return $this->_department;
+    }
+}
+
+class Department{
+    private $_manager;
+
+    public function __construct( $manager ){
+        $this->_manager = $manager;
+    }
+
+    public function getManager(){
+        return $this->_manager;
+    }
 }
