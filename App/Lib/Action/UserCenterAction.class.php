@@ -10,6 +10,8 @@ class UserCenterAction{
 
     public function index(){
 
+        echo "-------";
+        exit;
         $uc = new UserCenterModel();
         $uc->demo();
     }

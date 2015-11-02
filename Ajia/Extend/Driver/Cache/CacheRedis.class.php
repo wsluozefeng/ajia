@@ -10,7 +10,7 @@ class CacheRedis extends Cache{
 
     protected static $instance = array();
 
-    public function __construct( $config )
+    public function __construct( $config = '' )
     {
         if ( !extension_loaded( 'redis' ) ) {
             throw new Exception( 'php-redis扩展不存在' );
